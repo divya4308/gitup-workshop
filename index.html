@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DIVYA.exe | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: #d9ffe8;
+            font-family: "Courier New", monospace;
+            line-height: 1.7;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5,5,5,0.95);
+            border-bottom: 1px solid #00ff88;
+            padding: 12px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .online {
+            color: #00ff88;
+            font-size: 13px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .terminal {
+            width: 100%;
+            max-width: 950px;
+            border: 1px solid #00ff88;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0,255,136,0.15);
+            overflow: hidden;
+        }
+
+        .terminal-head {
+            background: #101010;
+            padding: 12px 18px;
+            border-bottom: 1px solid #222;
+        }
+
+        .dots {
+            color: #00ff88;
+            letter-spacing: 5px;
+        }
+
+        .terminal-body {
+            padding: 45px;
+        }
+
+        .green {
+            color: #00ff88;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .big-title {
+            font-size: clamp(35px, 7vw, 75px);
+            color: white;
+            margin: 15px 0;
+            text-shadow: 0 0 15px rgba(0,255,136,0.3);
+        }
+
+        .typing {
+            color: #00ff88;
+            font-size: 18px;
+        }
+
+        .cursor {
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: #00ff88;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        /* SECTIONS */
+
+        section {
+            max-width: 950px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .command {
+            color: #00ff88;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: #0d0d0d;
+            border: 1px solid #164d32;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 18px 0;
+        }
+
+        .card:hover {
+            border-color: #00ff88;
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+
+        /* SKILLS */
+
+        .skill {
+            margin: 20px 0;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bar {
+            height: 10px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .fill {
+            height: 100%;
+            background: #00ff88;
+            box-shadow: 0 0 10px #00ff88;
+        }
+
+        .python {
+            width: 80%;
+        }
+
+        .html {
+            width: 90%;
+        }
+
+        .sql {
+            width: 75%;
+        }
+
+        .c {
+            width: 65%;
+        }
+
+        /* PROJECTS */
+
+        .project-number {
+            color: #00ff88;
+            font-size: 13px;
+        }
+
+        .project-title {
+            color: white;
+            font-size: 22px;
+            margin: 5px 0 12px;
+        }
+
+        /* MISSIONS */
+
+        .mission {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #164d32;
+        }
+
+        .locked {
+            color: #666;
+        }
+
+        /* TERMINAL FOOTER */
+
+        .contact-box {
+            text-align: center;
+            border: 1px solid #00ff88;
+            padding: 40px 20px;
+            border-radius: 10px;
+        }
+
+        .contact-box a {
+            color: #00ff88;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #163c29;
+            color: #668877;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:600px) {
+
+            .terminal-body {
+                padding: 25px;
+            }
+
+            section {
+                padding: 60px 18px;
+            }
+
+            .topbar {
+                padding: 12px 20px;
+            }
+
+            .online {
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+    <div class="logo">
+        &lt;DIVYA.exe /&gt;
+    </div>
+
+    <div class="online">
+        ● SYSTEM ONLINE
+    </div>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="terminal">
+
+        <div class="terminal-head">
+            <span class="dots">● ● ●</span>
+        </div>
+
+        <div class="terminal-body">
+
+            <p class="green">
+                &gt; SYSTEM BOOTING...
+            </p>
+
+            <p>
+                &gt; USER FOUND:
+                <span class="white">DIVYA</span>
+            </p>
+
+            <p>
+                &gt; STATUS:
+                <span class="green">ONLINE</span>
+            </p>
+
+            <h1 class="big-title">
+                DIVYA.exe
+            </h1>
+
+            <p class="typing">
+                &gt; Student. Learner. Developer in progress.
+                <span class="cursor">_</span>
+            </p>
+
+            <a href="#about" class="btn">
+                ENTER PORTFOLIO →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="command">
+        &gt; whoami
+    </div>
+
+    <div class="card">
+
+        <p>
+            <span class="green">Name:</span>
+            Divya
+        </p>
+
+        <p>
+            <span class="green">Role:</span>
+            College Student
+        </p>
+
+        <p>
+            <span class="green">Interest:</span>
+            Technology & Programming
+        </p>
+
+        <p>
+            <span class="green">Status:</span>
+            Developer in Progress
+        </p>
+
+        <br>
+
+        <p>
+            I am a student who enjoys learning technology,
+            building projects and improving my skills step by step.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- JOURNEY -->
+
+<section>
+
+    <div class="command">
+        &gt; cat my_journey.txt
+    </div>
+
+    <div class="card">
+
+        <p>
+            <span class="green">2024</span>
+            → Started exploring programming
+        </p>
+
+        <p>
+            <span class="green">2025</span>
+            → Learned C, Python and SQL
+        </p>
+
+        <p>
+            <span class="green">2026</span>
+            → Started Web Development & GitHub
+        </p>
+
+        <p>
+            <span class="green">NEXT</span>
+            → Build real-world projects
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="command">
+        &gt; load_skills()
+    </div>
+
+
+    <div class="card">
+
+        <div class="skill">
+
+            <div class="skill-name">
+                <span>Python</span>
+                <span>80%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill python"></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                <span>HTML & CSS</span>
+                <span>90%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill html"></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                <span>SQL</span>
+                <span>75%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill sql"></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                <span>C Programming</span>
+                <span>65%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill c"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="command">
+        &gt; ls ./projects
+    </div>
+
+
+    <div class="card">
+
+        <span class="project-number">
+            PROJECT_01
+        </span>
+
+        <div class="project-title">
+            📚 Library Management System
+        </div>
+
+        <p>
+            A database project designed to manage
+            books and library records using SQL.
+        </p>
+
+        <br>
+
+        <p>
+            <span class="green">Problem →</span>
+            Manual record management
+        </p>
+
+        <p>
+            <span class="green">Solution →</span>
+            Digital database system
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <span class="project-number">
+            PROJECT_02
+        </span>
+
+        <div class="project-title">
+            🌐 Personal Portfolio
+        </div>
+
+        <p>
+            A unique terminal-style portfolio
+            hosted using GitHub Pages.
+        </p>
+
+        <br>
+
+        <p>
+            <span class="green">Built with →</span>
+            HTML + CSS + JavaScript
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <span class="project-number">
+            PROJECT_03
+        </span>
+
+        <div class="project-title">
+            💡 Future Project
+        </div>
+
+        <p>
+            Something new is currently under development...
+        </p>
+
+        <p class="green">
+            Status: COMPILING...
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- BUGS -->
+
+<section>
+
+    <div class="command">
+        &gt; current_bugs
+    </div>
+
+
+    <div class="card">
+
+        <p>
+            🐛 BUG_001 —
+            Need more coding practice
+        </p>
+
+        <p>
+            🐛 BUG_002 —
+            Improve communication skills
+        </p>
+
+        <p>
+            🐛 BUG_003 —
+            Build more real-world projects
+        </p>
+
+        <br>
+
+        <p class="green">
+            > All bugs are being fixed...
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- MISSIONS -->
+
+<section>
+
+    <div class="command">
+        &gt; future_missions
+    </div>
+
+
+    <div class="card">
+
+        <div class="mission">
+            <span>Learn Python</span>
+            <span class="green">✓ DONE</span>
+        </div>
+
+        <div class="mission">
+            <span>Learn SQL</span>
+            <span class="green">✓ DONE</span>
+        </div>
+
+        <div class="mission">
+            <span>Build Portfolio</span>
+            <span class="green">✓ DONE</span>
+        </div>
+
+        <div class="mission">
+            <span>Learn JavaScript</span>
+            <span class="locked">🔒 LOCKED</span>
+        </div>
+
+        <div class="mission">
+            <span>Internship</span>
+            <span class="locked">🔒 LOCKED</span>
+        </div>
+
+        <div class="mission">
+            <span>Major Project</span>
+            <span class="locked">🔒 LOCKED</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section>
+
+    <div class="command">
+        &gt; connect_with_me
+    </div>
+
+
+    <div class="contact-box">
+
+        <h2 class="white">
+            Let's Build Something.
+        </h2>
+
+        <p>
+            My journey is still compiling...
+        </p>
+
+        <br>
+
+        <a href="https://github.com/" target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://linkedin.com/" target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="mailto:yourmail@gmail.com">
+            Email
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- END -->
+
+<footer>
+
+    <p>
+        &gt; system.shutdown()
+    </p>
+
+    <br>
+
+    <p>
+        ERROR 404:
+        <span class="green">
+            MY JOURNEY IS NOT FINISHED.
+        </span>
+    </p>
+
+    <br>
+
+    <p>
+        Still Learning • Still Building • Still Becoming
+    </p>
+
+    <br>
+
+    <p>
+        DIVYA.exe — STATUS: COMPILING... ███████░░░
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
